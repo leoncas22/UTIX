@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Kami - UTIX</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎫</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e11d48',
+                        secondary: '#0ea5e9',
+                        dark: '#0f172a',
+                        accent: '#f59e0b'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-dark">
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
+                    <span class="text-white font-bold text-xl">U</span>
+                </div>
+                <h1 class="text-2xl font-bold">UTIX</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="font-medium hover:text-primary">Beranda</a>
+                <a href="profile.html" class="font-medium hover:text-primary">Profil</a>
+                <a href="products.html" class="font-medium text-primary">Produk</a>
+                <a href="event.html" class="font-medium hover:text-primary">Event</a>
+                <a href="index.html#contact" class="font-medium hover:text-primary">Kontak</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button class="hidden md:block bg-primary text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition">Download Aplikasi</button>
+                <button class="md:hidden text-dark">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="products" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4 text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold">Produk & Layanan Kami</h2>
+          <p class="text-lg text-gray-600 mt-2">Solusi lengkap untuk semua kebutuhan tiket digital Anda.</p>
+          <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+      </div>
+      <section class="product-grid">
+        <div class="product-card">
+          <div class="product-icon bg-red-100"><i class="fas fa-ticket-alt"></i></div>
+          <div class="product-content">
+            <h3>Event Pass</h3>
+            <p>Akses ke berbagai event dan konser dengan satu tiket digital</p>
+            <div class="product-tags">
+              <span class="product-tag">#5001E</span>
+              <span class="product-tag">VIP</span>
+            </div>
+          </div>
+          <div class="product-link">Lihat Detail</div>
+        </div>
+        <div class="product-card">
+          <div class="product-icon" style="background: #e0f2fe;"><i class="fas fa-plane" style="color:#0ea5e9;"></i></div>
+          <div class="product-content">
+            <h3>Travel Pass</h3>
+            <p>Tiket transportasi untuk pesawat, kereta, dan bus dalam satu aplikasi</p>
+            <div class="product-tags">
+              <span class="product-tag">EKONOMI</span>
+              <span class="product-tag">12A</span>
+            </div>
+          </div>
+          <div class="product-link" style="color:#0ea5e9;">Lihat Detail</div>
+        </div>
+        <div class="product-card">
+          <div class="product-icon" style="background: #fef3c7;"><i class="fas fa-gift" style="color:#f59e0b;"></i></div>
+          <div class="product-content">
+            <h3>Gift Voucher</h3>
+            <p>Hadiah digital untuk berbagai layanan hiburan dan transportasi</p>
+            <div class="product-tags">
+              <span class="product-tag">Rp 500.000</span>
+            </div>
+          </div>
+          <div class="product-link" style="color:#f59e0b;">Lihat Detail</div>
+        </div>
+        <div class="product-card">
+          <div class="product-icon" style="background: #fde8e8;"><i class="fas fa-film" style="color:#e11d48;"></i></div>
+          <div class="product-content">
+            <h3>Movie Ticket</h3>
+            <p>Beli tiket bioskop dari berbagai jaringan tanpa antre</p>
+            <div class="product-tags">
+              <span class="product-tag">IMAX</span>
+              <span class="product-tag">D7</span>
+            </div>
+          </div>
+          <div class="product-link">Lihat Detail</div>
+        </div>
+        <div class="product-card">
+          <div class="product-icon" style="background: #fff7ed;"><i class="fas fa-crown" style="color:#f59e0b;"></i></div>
+          <div class="product-content">
+            <h3>Premium Membership</h3>
+            <p>Akses eksklusif, diskon, dan prioritas untuk semua layanan</p>
+            <div class="product-tags">
+              <span class="product-tag">PREMIUM</span>
+            </div>
+          </div>
+          <div class="product-link" style="color:#f59e0b;">Lihat Detail</div>
+        </div>
+        <div class="product-card">
+          <div class="product-icon" style="background: #e0f2fe;"><i class="fas fa-parking" style="color:#0ea5e9;"></i></div>
+          <div class="product-content">
+            <h3>Parking Pass</h3>
+            <p>Parkir praktis dan cepat di berbagai lokasi</p>
+            <div class="product-tags">
+              <span class="product-tag">B2-109</span>
+              <span class="product-tag">3 JAM</span>
+            </div>
+          </div>
+          <div class="product-link" style="color:#0ea5e9;">Lihat Detail</div>
+        </div>
+        <div class="product-card">
+          <div class="product-icon" style="background: #fde8e8;"><i class="fas fa-bolt" style="color:#e11d48;"></i></div>
+          <div class="product-content">
+            <h3>Fastline</h3>
+            <p>Akses cepat tanpa antre untuk event dan transportasi</p>
+            <div class="product-tags">
+              <span class="product-tag">PRIORITAS</span>
+            </div>
+          </div>
+          <div class="product-link">Lihat Detail</div>
+        </div>
+        <div class="product-card">
+          <div class="product-icon" style="background: #e0f2fe;"><i class="fas fa-bus" style="color:#0ea5e9;"></i></div>
+          <div class="product-content">
+            <h3>Daily Pass</h3>
+            <p>Tiket harian untuk transportasi umum di berbagai kota</p>
+            <div class="product-tags">
+              <span class="product-tag">1 HARI</span>
+            </div>
+          </div>
+          <div class="product-link" style="color:#0ea5e9;">Lihat Detail</div>
+        </div>
+      </section>
+    </section>
+
+    <section class="parking-pass-section">
+      <div class="parking-pass-container">
+        <div class="parking-pass-info">
+          <h2>Parking Pass</h2>
+          <h3>Parkir Jadi Praktis &amp; Cepat</h3>
+          <p><strong class="text-blue">Dengan Parking Pass dari UTIX</strong>, pengguna bisa memesan dan membayar parkir di lokasi tertentu langsung dari aplikasi.</p>
+          <p><strong>Cocok untuk event, bandara, mall,</strong> dan gedung perkantoran.</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check-circle"></i> Booking parkir sebelum tiba di lokasi</li>
+            <li><i class="fas fa-check-circle"></i> Pembayaran digital tanpa uang tunai</li>
+            <li><i class="fas fa-check-circle"></i> Notifikasi waktu parkir hampir habis</li>
+          </ul>
+        </div>
+        <div class="parking-pass-ticket">
+          <div class="ticket-card">
+            <h3>Parking Pass</h3>
+            <p class="sub">FAQUITY PARKING</p>
+            <p class="label">Nomor Parkir</p>
+            <h2 class="number">B2-109</h2>
+            <p class="small">Berlaku hingga 26 Agu 2025 13:00</p>
+            <div class="flex-row">
+              <div>
+                <label>Tanggal</label>
+                <strong>26 Agu 2025</strong>
+              </div>
+              <div>
+                <label>Durasi</label>
+                <strong>3 Jam</strong>
+              </div>
+            </div>
+            <div class="booking-code">#PK5001E</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

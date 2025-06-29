@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Perusahaan - UTIX</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎫</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e11d48',
+                        secondary: '#0ea5e9',
+                        dark: '#0f172a',
+                        accent: '#f59e0b'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-dark">
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
+                    <span class="text-white font-bold text-xl">U</span>
+                </div>
+                <h1 class="text-2xl font-bold">UTIX</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="font-medium hover:text-primary">Beranda</a>
+                <a href="profile.html" class="font-medium text-primary">Profil</a>
+                <a href="products.html" class="font-medium hover:text-primary">Produk</a>
+                <a href="event.html" class="font-medium hover:text-primary">Event</a>
+                <a href="index.html#contact" class="font-medium hover:text-primary">Kontak</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button class="hidden md:block bg-primary text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition">Download Aplikasi</button>
+                <button class="md:hidden text-dark">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="profile" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold">Company Profile</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+            </div>
+            <div class="max-w-4xl mx-auto bg-gray-50 rounded-xl p-8 shadow-sm">
+                <p class="text-lg text-center mb-8">
+                    UTIX adalah platform digital inovatif yang memudahkan pembelian tiket dan akses layanan hiburan, transportasi, dan event dalam satu aplikasi.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8 mt-12">
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <h3 class="text-2xl font-bold text-primary mb-4">Visi Perusahaan</h3>
+                        <p class="text-lg font-medium">Menjadi solusi tiket digital nomor satu di Indonesia</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <h3 class="text-2xl font-bold text-primary mb-4">Misi Perusahaan</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span>Mempermudah akses layanan hiburan dan transportasi</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span>Memberikan layanan cepat, aman, dan terpercaya</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span>Menyediakan solusi digital untuk semua kebutuhan tiket</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
