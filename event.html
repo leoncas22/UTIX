@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Mendatang - UTIX</title>
+    <title>UTIX - Digital Ticketing & Access Platform</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎫</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -25,25 +25,40 @@
 </head>
 <body class="text-dark">
     <header class="sticky top-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
-                    <span class="text-white font-bold text-xl">U</span>
+        <div class="container mx-auto px-4">
+            <div class="py-3 flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
+                        <span class="text-white font-bold text-xl">U</span>
+                    </div>
+                    <h1 class="text-2xl font-bold">UTIX</h1>
                 </div>
-                <h1 class="text-2xl font-bold">UTIX</h1>
+
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="font-medium hover:text-primary">Beranda</a>
+                    <a href="profile.html" class="font-medium hover:text-primary">Profil</a>
+                    <a href="products.html" class="font-medium hover:text-primary">Produk</a>
+                    <a href="event.html" class="font-medium hover:text-primary">Event</a>
+                    <a href="#contact" class="font-medium hover:text-primary">Kontak</a>
+                </nav>
+
+                <div class="flex items-center space-x-4">
+                    <button class="hidden md:block bg-primary text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition">Download Aplikasi</button>
+                    <button id="mobile-menu-button" class="md:hidden text-dark focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
             </div>
-            <nav class="hidden md:flex space-x-8">
-                <a href="index.html" class="font-medium hover:text-primary">Beranda</a>
-                <a href="profile.html" class="font-medium hover:text-primary">Profil</a>
-                <a href="products.html" class="font-medium hover:text-primary">Produk</a>
-                <a href="event.html" class="font-medium text-primary">Event</a>
-                <a href="index.html#contact" class="font-medium hover:text-primary">Kontak</a>
-            </nav>
-            <div class="flex items-center space-x-4">
-                <button class="hidden md:block bg-primary text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition">Download Aplikasi</button>
-                <button class="md:hidden text-dark">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-white hover:bg-primary">Beranda</a>
+                <a href="profile.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-white hover:bg-primary">Profil</a>
+                <a href="products.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-white hover:bg-primary">Produk</a>
+                <a href="event.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-white hover:bg-primary">Event</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-white hover:bg-primary">Kontak</a>
+                <a href="#" class="block w-full text-left mt-2 bg-primary text-white px-3 py-2 rounded-lg font-medium hover:bg-opacity-90 transition">Download Aplikasi</a>
             </div>
         </div>
     </header>
