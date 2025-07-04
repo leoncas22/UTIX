@@ -47,6 +47,11 @@
                     <button id="mobile-menu-button" class="md:hidden text-dark focus:outline-none">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
+                    <a href="checkout.html" class="relative text-dark hover:text-primary">
+  <i class="fas fa-shopping-cart text-xl"></i>
+  <span id="cart-count" class="absolute -top-2 -right-2 bg-primary text-white text-xs font-semibold px-1.5 py-0.5 rounded-full hidden">0</span>
+</a>
+
                 </div>
             </div>
         </div>
@@ -63,35 +68,123 @@
         </div>
     </header>
 
-    <section class="event-highlight">
-      <div class="event-card">
-        <div class="event-header">
-          <div class="event-date">
-            <div class="day">26</div>
-            <div class="month">AUGUST</div>
-          </div>
-          <div class="event-host">
-            <span>HOSTED BY</span><br />
-            <strong>WKWK STUDIOS</strong>
-          </div>
-        </div>
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4 text-center mb-12">
+    <h2 class="text-3xl font-bold text-primary">Event Mendatang</h2>
+    <p class="text-gray-600 mt-2">Pilih dan pesan tiket event favoritmu!</p>
+  </div>
 
-        <h2 class="event-title">Music Festival 2025</h2>
-        <p class="event-desc">
-         Hindia, Bernadya, Juicy Luicy
-        </p>
+  <div class="grid md:grid-cols-3 gap-6 px-4 max-w-6xl mx-auto">
+    <!-- EVENT 1 -->
+    <div class="bg-white rounded-xl shadow-md p-6">
+      <h3 class="text-xl font-bold text-dark mb-1">UTIX Fest 2025</h3>
+      <p class="text-sm text-gray-600 mb-2">15 Nov 2025 • GBK Jakarta</p>
+      <p class="text-sm text-gray-500 mb-4">NOAH, Raisa, Rich Brian</p>
+      <button class="event-btn-tiket bg-primary text-white py-2 px-4 rounded w-full font-semibold hover:bg-opacity-90 transition"
+        data-title="UTIX Fest 2025"
+        data-date="15 November 2025"
+        data-location="GBK Jakarta"
+        data-artists="NOAH, Raisa, Rich Brian, NIKI"
+        data-description="Festival musik terbesar tahun ini dari UTIX! Dimeriahkan oleh artis papan atas Indonesia dan internasional. Panggung spektakuler, lighting memukau, dan ribuan penonton!"
+        data-price="250000">
+        Dapatkan Tiket
+      </button>
+    </div>
 
-        <div class="event-details">
-          <h3>FREE ENTRANCE</h3>
-          <p>ALL NIGHT</p>
-          <p>8:00 PM – 2:00 AM</p>
-        </div>
+    <!-- EVENT 2 -->
+    <div class="bg-white rounded-xl shadow-md p-6">
+      <h3 class="text-xl font-bold text-dark mb-1">UTIX Soundwave</h3>
+      <p class="text-sm text-gray-600 mb-2">20 Des 2025 • Lapangan Banteng, Jakarta</p>
+      <p class="text-sm text-gray-500 mb-4">Pamungkas, Ardhito, Hindia</p>
+      <button class="event-btn-tiket bg-secondary text-white py-2 px-4 rounded w-full font-semibold hover:bg-opacity-90 transition"
+        data-title="UTIX Soundwave"
+        data-date="20 Desember 2025"
+        data-location="Lapangan Banteng, Jakarta"
+        data-artists="Pamungkas, Ardhito Pramono, Hindia"
+        data-description="Suasana akustik penuh nuansa cinta dan nostalgia. Panggung terbuka dengan bintang-bintang bersinar menemani malammu."
+        data-price="150000">
+        Dapatkan Tiket
+      </button>
+    </div>
 
-        <a href="#" class="event-btn">Dapatkan Tiket Sekarang</a>
-        <p class="event-url">www.utix.com/event/music-festival</p>
-      </div>
-    </section>
+    <!-- EVENT 3 -->
+    <div class="bg-white rounded-xl shadow-md p-6">
+      <h3 class="text-xl font-bold text-dark mb-1">UTIX Culture Expo</h3>
+      <p class="text-sm text-gray-600 mb-2">5 Jan 2026 • Bali Nusa Dua Convention Center</p>
+      <p class="text-sm text-gray-500 mb-4">Seniman Nasional & Internasional</p>
+      <button class="event-btn-tiket bg-accent text-white py-2 px-4 rounded w-full font-semibold hover:bg-opacity-90 transition"
+        data-title="UTIX Culture Expo"
+        data-date="5 Januari 2026"
+        data-location="BNDCC, Bali"
+        data-artists="Seniman Tradisional, Tarian Daerah, International Guests"
+        data-description="Eksplorasi budaya nusantara dan dunia melalui pameran, workshop, dan pertunjukan live. Cocok untuk semua usia dan keluarga."
+        data-price="100000">
+        Dapatkan Tiket
+      </button>
+    </div>
+  </div>
+</section>
 
-    <script src="script.js"></script>
+<div id="event-modal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 hidden">
+  <div class="bg-white rounded-xl shadow-xl w-11/12 max-w-2xl p-8 relative">
+    <button id="event-modal-close" class="absolute top-4 right-4 text-2xl text-gray-600 hover:text-dark">&times;</button>
+    <div id="event-modal-content">
+      <!-- isi dinamis -->
+    </div>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('event-modal');
+  const modalClose = document.getElementById('event-modal-close');
+  const modalContent = document.getElementById('event-modal-content');
+  const eventButtons = document.querySelectorAll('.event-btn-tiket');
+
+  eventButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const title = btn.dataset.title;
+      const date = btn.dataset.date;
+      const location = btn.dataset.location;
+      const artists = btn.dataset.artists;
+      const description = btn.dataset.description;
+      const price = parseInt(btn.dataset.price);
+
+      modalContent.innerHTML = `
+        <h2 class="text-2xl font-bold text-primary mb-2">${title}</h2>
+        <p class="text-sm text-gray-500 mb-1">${date}</p>
+        <p class="text-sm text-gray-500 mb-4">${location}</p>
+        <p class="text-gray-700 mb-2 font-semibold">Line-up:</p>
+        <p class="text-gray-600 mb-4">${artists}</p>
+        <p class="text-justify text-gray-600 mb-4">${description}</p>
+        <p class="font-semibold text-dark mb-6">Harga Tiket: <span class="text-primary">Rp ${price.toLocaleString('id-ID')}</span></p>
+        <button id="checkout-event-button" class="w-full bg-primary text-white py-3 rounded-lg hover:bg-opacity-90 transition font-semibold">
+          Pesan Tiket
+        </button>
+      `;
+
+      modal.classList.remove('hidden');
+
+      document.getElementById('checkout-event-button').addEventListener('click', () => {
+        const cart = JSON.parse(localStorage.getItem('utix_cart')) || [];
+        cart.push({
+          title,
+          icon: "fa-ticket-alt",
+          color: "text-primary",
+          description: `${title} — ${date}, ${location}. Line-up: ${artists}`,
+          price
+        });
+        localStorage.setItem('utix_cart', JSON.stringify(cart));
+        window.location.href = "checkout.html";
+      });
+    });
+  });
+
+  modalClose.addEventListener('click', () => modal.classList.add('hidden'));
+  modal.addEventListener('click', e => {
+    if (e.target === modal) modal.classList.add('hidden');
+  });
+</script>
+
+
 </body>
 </html>

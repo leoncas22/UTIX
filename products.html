@@ -47,6 +47,11 @@
                     <button id="mobile-menu-button" class="md:hidden text-dark focus:outline-none">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
+                    <a href="checkout.html" class="relative text-dark hover:text-primary">
+  <i class="fas fa-shopping-cart text-xl"></i>
+  <span id="cart-count" class="absolute -top-2 -right-2 bg-primary text-white text-xs font-semibold px-1.5 py-0.5 rounded-full hidden">0</span>
+</a>
+
                 </div>
             </div>
         </div>
@@ -69,99 +74,155 @@
           <p class="text-lg text-gray-600 mt-2">Solusi lengkap untuk semua kebutuhan tiket digital Anda.</p>
           <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
       </div>
-      <section class="product-grid">
-        <div class="product-card">
-          <div class="product-icon bg-red-100"><i class="fas fa-ticket-alt"></i></div>
-          <div class="product-content">
-            <h3>Event Pass</h3>
-            <p>Akses ke berbagai event dan konser dengan satu tiket digital</p>
-            <div class="product-tags">
-              <span class="product-tag">#5001E</span>
-              <span class="product-tag">VIP</span>
-            </div>
-          </div>
-          <div class="product-link">Lihat Detail</div>
-        </div>
-        <div class="product-card">
-          <div class="product-icon" style="background: #e0f2fe;"><i class="fas fa-plane" style="color:#0ea5e9;"></i></div>
-          <div class="product-content">
-            <h3>Travel Pass</h3>
-            <p>Tiket transportasi untuk pesawat, kereta, dan bus dalam satu aplikasi</p>
-            <div class="product-tags">
-              <span class="product-tag">EKONOMI</span>
-              <span class="product-tag">12A</span>
-            </div>
-          </div>
-          <div class="product-link" style="color:#0ea5e9;">Lihat Detail</div>
-        </div>
-        <div class="product-card">
-          <div class="product-icon" style="background: #fef3c7;"><i class="fas fa-gift" style="color:#f59e0b;"></i></div>
-          <div class="product-content">
-            <h3>Gift Voucher</h3>
-            <p>Hadiah digital untuk berbagai layanan hiburan dan transportasi</p>
-            <div class="product-tags">
-              <span class="product-tag">Rp 500.000</span>
-            </div>
-          </div>
-          <div class="product-link" style="color:#f59e0b;">Lihat Detail</div>
-        </div>
-        <div class="product-card">
-          <div class="product-icon" style="background: #fde8e8;"><i class="fas fa-film" style="color:#e11d48;"></i></div>
-          <div class="product-content">
-            <h3>Movie Ticket</h3>
-            <p>Beli tiket bioskop dari berbagai jaringan tanpa antre</p>
-            <div class="product-tags">
-              <span class="product-tag">IMAX</span>
-              <span class="product-tag">D7</span>
-            </div>
-          </div>
-          <div class="product-link">Lihat Detail</div>
-        </div>
-        <div class="product-card">
-          <div class="product-icon" style="background: #fff7ed;"><i class="fas fa-crown" style="color:#f59e0b;"></i></div>
-          <div class="product-content">
-            <h3>Premium Membership</h3>
-            <p>Akses eksklusif, diskon, dan prioritas untuk semua layanan</p>
-            <div class="product-tags">
-              <span class="product-tag">PREMIUM</span>
-            </div>
-          </div>
-          <div class="product-link" style="color:#f59e0b;">Lihat Detail</div>
-        </div>
-        <div class="product-card">
-          <div class="product-icon" style="background: #e0f2fe;"><i class="fas fa-parking" style="color:#0ea5e9;"></i></div>
-          <div class="product-content">
-            <h3>Parking Pass</h3>
-            <p>Parkir praktis dan cepat di berbagai lokasi</p>
-            <div class="product-tags">
-              <span class="product-tag">B2-109</span>
-              <span class="product-tag">3 JAM</span>
-            </div>
-          </div>
-          <div class="product-link" style="color:#0ea5e9;">Lihat Detail</div>
-        </div>
-        <div class="product-card">
-          <div class="product-icon" style="background: #fde8e8;"><i class="fas fa-bolt" style="color:#e11d48;"></i></div>
-          <div class="product-content">
-            <h3>Fastline</h3>
-            <p>Akses cepat tanpa antre untuk event dan transportasi</p>
-            <div class="product-tags">
-              <span class="product-tag">PRIORITAS</span>
-            </div>
-          </div>
-          <div class="product-link">Lihat Detail</div>
-        </div>
-        <div class="product-card">
-          <div class="product-icon" style="background: #e0f2fe;"><i class="fas fa-bus" style="color:#0ea5e9;"></i></div>
-          <div class="product-content">
-            <h3>Daily Pass</h3>
-            <p>Tiket harian untuk transportasi umum di berbagai kota</p>
-            <div class="product-tags">
-              <span class="product-tag">1 HARI</span>
-            </div>
-          </div>
-          <div class="product-link" style="color:#0ea5e9;">Lihat Detail</div>
-        </div>
+      <section class="py-16">
+    <div class="container mx-auto px-4 text-center mb-16">
+      <h2 class="text-3xl font-bold">Produk & Layanan Kami</h2>
+      <p class="text-lg text-gray-600 mt-2">Klik "Lihat Detail" untuk informasi produk.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
+      <div class="bg-white rounded-lg p-6 shadow-md flex flex-col">
+        <div class="text-4xl text-primary mb-4"><i class="fas fa-ticket-alt"></i></div>
+        <h3 class="text-xl font-bold mb-2">UTiX Event Pass</h3>
+        <p class="text-gray-600 mb-4">Tiket digital untuk konser, seminar, dan event lainnya.</p>
+        <button class="product-detail-button product-link"
+  data-title="UTiX Event Pass"
+  data-icon="fa-ticket-alt"
+  data-color="text-primary"
+  data-price="75000"
+  data-description="UTiX Event Pass adalah solusi tiket digital ...">
+  Lihat Detail
+</button>
+
+      </div>
+
+      <div class="bg-white rounded-lg p-6 shadow-md flex flex-col">
+        <div class="text-4xl text-secondary mb-4"><i class="fas fa-plane"></i></div>
+        <h3 class="text-xl font-bold mb-2">UTiX Travel Pass</h3>
+        <p class="text-gray-600 mb-4">Tiket perjalanan kereta, bus, dan pesawat dalam satu aplikasi.</p>
+<button class="product-detail-button product-link"
+  data-title="UTiX Travel Pass"
+  data-icon="fa-plane"
+  data-color="text-secondary"
+  data-price="120000"
+  data-description="UTiX Travel Pass dirancang untuk kebutuhan perjalanan seperti bus, kereta, atau shuttle. Tiket ini dapat dibeli secara online dan digunakan secara digital.">
+  Lihat Detail
+</button>
+
+      </div>
+
+      <div class="bg-white rounded-lg p-6 shadow-md flex flex-col">
+        <div class="text-4xl text-accent mb-4"><i class="fas fa-landmark"></i></div>
+        <h3 class="text-xl font-bold mb-2">UTiX Wisata</h3>
+        <p class="text-gray-600 mb-4">Akses digital ke berbagai destinasi wisata populer.</p>
+<button class="product-detail-button product-link"
+  data-title="UTiX Wisata"
+  data-icon="fa-landmark"
+  data-color="text-accent"
+  data-price="100000"
+  data-description="UTiX Wisata memberikan akses ke destinasi rekreasi keluarga, taman hiburan, museum, dan kebun binatang dengan sistem digital tanpa antre.">
+  Lihat Detail
+</button>
+
+      </div>
+
+      <div class="bg-white rounded-lg p-6 shadow-md flex flex-col">
+        <div class="text-4xl text-secondary mb-4"><i class="fas fa-star"></i></div>
+        <h3 class="text-xl font-bold mb-2">UTiX All Access</h3>
+        <p class="text-gray-600 mb-4">Tiket terusan untuk festival multi hari dan event spesial.</p>
+ <button class="product-detail-button product-link"
+  data-title="UTiX All Access"
+  data-icon="fa-star"
+  data-color="text-secondary"
+  data-price="180000"
+  data-description="Tiket terusan untuk event atau festival beberapa hari. Bebas keluar masuk lokasi tanpa beli ulang.">
+  Lihat Detail
+</button>
+
+        </button>
+
+</div>
+<div class="product-card">
+  <div class="product-icon bg-orange-100"><i class="fas fa-crown"></i></div>
+  <div class="product-content">
+    <h3>Premium Membership</h3>
+    <p>Akses eksklusif, diskon, dan prioritas untuk semua layanan.</p>
+    <div class="product-tags">
+      <span class="product-tag">PREMIUM</span>
+    </div>
+  </div>
+ <button class="product-detail-button product-link"
+  data-title="UTiX Premium Membership"
+  data-icon="fa-crown"
+  data-color="text-accent"
+  data-price="250000"
+  data-description="Layanan eksklusif untuk anggota setia, dengan prioritas akses, diskon, dan undangan event khusus.">
+  Lihat Detail
+</button>
+
+</div>
+
+      <div class="product-card">
+  <div class="product-icon bg-blue-100"><i class="fas fa-parking"></i></div>
+  <div class="product-content">
+    <h3>Parking Pass</h3>
+    <p>Parkir praktis dan cepat di berbagai lokasi event dan venue.</p>
+    <div class="product-tags">
+      <span class="product-tag">B2-109</span>
+      <span class="product-tag">3 JAM</span>
+    </div>
+  </div>
+ <button class="product-detail-button product-link"
+  data-title="UTiX Parking Pass"
+  data-icon="fa-parking"
+  data-color="text-secondary"
+  data-price="30000"
+  data-description="Solusi parkir digital untuk event, bandara, atau gedung. Booking & bayar langsung dari aplikasi UTIX.">
+  Lihat Detail
+</button>
+
+</div>
+
+ <div class="product-card">
+  <div class="product-icon bg-red-100"><i class="fas fa-bolt"></i></div>
+  <div class="product-content">
+    <h3>Fastline</h3>
+    <p>Akses cepat tanpa antre untuk event dan transportasi.</p>
+    <div class="product-tags">
+      <span class="product-tag">PRIORITAS</span>
+    </div>
+  </div>
+ <button class="product-detail-button product-link"
+  data-title="UTiX Fastline"
+  data-icon="fa-bolt"
+  data-color="text-primary"
+  data-price="50000"
+  data-description="Masuk tanpa antrean panjang di konser, venue populer, atau transportasi umum melalui jalur prioritas.">
+  Lihat Detail
+</button>
+
+</div>
+
+ <div class="product-card">
+  <div class="product-icon bg-blue-100"><i class="fas fa-bus"></i></div>
+  <div class="product-content">
+    <h3>Daily Pass</h3>
+    <p>Tiket harian untuk transportasi umum di berbagai kota.</p>
+    <div class="product-tags">
+      <span class="product-tag">1 HARI</span>
+    </div>
+  </div>
+ <button class="product-detail-button product-link"
+  data-title="UTiX Daily Pass"
+  data-icon="fa-bus"
+  data-color="text-secondary"
+  data-price="25000"
+  data-description="Tiket harian fleksibel untuk transportasi umum, coworking, gym, atau ruang publik lain tanpa langganan bulanan.">
+  Lihat Detail
+</button>
+
+</div>
+
       </section>
     </section>
 
@@ -201,5 +262,16 @@
       </div>
     </section>
     <script src="script.js"></script>
+  <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50 hidden">
+  <div class="bg-white rounded-2xl shadow-2xl w-11/12 md:w-3/5 lg:w-1/2 max-w-4xl transform transition-transform duration-300 scale-95">
+      <div class="p-6 md:p-8 relative">
+          <button id="modal-close-button" class="absolute top-4 right-4 text-gray-500 hover:text-dark text-3xl">&times;</button>
+          <div id="modal-content" class="grid md:grid-cols-2 gap-6 md:gap-8 items-start max-h-[80vh] overflow-y-auto pr-4">
+              <!-- Konten modal akan diisi via JS -->
+          </div>
+      </div>
+  </div>
+</div>
+
 </body>
 </html>
